@@ -38,9 +38,7 @@ $menu_layanan  = $menu->layanan();
 <meta content="" name="description">
 <meta content="" name="keywords">
 
-<!-- Favicons -->
-<link href="<?php echo base_url() ?>/assets/dasbor/img/favicon.png" rel="icon">
-<link href="<?php echo base_url() ?>/assets/dasbor/img/apple-touch-icon.png" rel="apple-touch-icon">
+
 
 
 <!-- Google Fonts -->

@@ -36,6 +36,7 @@ class Berita extends BaseController
 
 		// Update hits
 		$data = [ 	'id_berita'	=> $berita['id_berita'],
+					'gambar'	=> $berita['gambar'],
 					'hits'		=> $berita['hits']+1
 				];
 		$m_berita->edit($data);
@@ -43,8 +44,10 @@ class Berita extends BaseController
 		
 		$data = [	'title'			=> 'Berita '.$konfigurasi['namaweb'],
 					'description'	=> 'Berita '.$konfigurasi['namaweb'],
+					'gambar'	    => $berita['gambar'],
+					'isi'	   	    => $berita['isi'],
 					'keywords'		=> 'Berita '.$konfigurasi['namaweb'],
-					'content'		=> 'berita/read'
+					'content'		=> 'berita/layanan'
 				];
 		echo view('layout/wrapper',$data);
 	}
@@ -83,6 +86,7 @@ class Berita extends BaseController
 
 		// Update hits
 		$data = [ 	'id_berita'	=> $berita['id_berita'],
+		'gambar'	=> $berita['gambar'],
 					'hits'		=> $berita['hits']+1
 				];
 		$m_berita->edit($data);

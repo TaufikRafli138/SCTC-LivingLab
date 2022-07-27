@@ -38,6 +38,7 @@ class Login extends BaseController
 				$this->session->set('id_user',$user['id_user']);
 				$this->session->set('akses_level',$user['akses_level']);
 				$this->session->set('nama',$user['nama']);
+				$this->session->set('gambar',$user['gambar']);
 				$this->session->setFlashdata('sukses', 'Hai '.$user['nama'].', Anda berhasil login');
 				return redirect()->to(base_url('admin/dasbor'));
 			}else{

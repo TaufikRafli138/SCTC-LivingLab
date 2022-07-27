@@ -18591,6 +18591,11 @@ body.text-sm .control-sidebar {
   color: #1f2d3d;
 }
 
+.navbar-sctc {
+  background-color: #dedede;
+  color: #1f2d3d;
+}
+
 .navbar-white.navbar-light .form-control-navbar::-webkit-input-placeholder {
   color: rgba(52, 58, 64, 0.8);
 }

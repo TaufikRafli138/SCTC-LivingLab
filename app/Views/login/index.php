@@ -14,7 +14,7 @@ $site         = $konfigurasi->listing();
   <meta content="<?php echo $description ?>" name="description">
   <meta content="<?php echo $keywords ?>" name="keywords">
   <!-- Favicons -->
-  <link href="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>" rel="icon">
+  <link href="<?php echo base_url() ?>/assets/upload/image/SCTC/Logo.png" rel="icon">
   <link href="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>" rel="apple-touch-icon">
 
   <!-- Google Font: Source Sans Pro -->
@@ -33,70 +33,7 @@ $site         = $konfigurasi->listing();
 <body class="hold-transition login-page" style="background-color: #2596be;">
 <div class="login-box" style="min-width: 35% !important; ">
   
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body" style="border-radius: 10px;">
 
-      <div class="login-logo">
-        <div class="row">
-          <div class="col-md-3">
-            <img src="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>" class="img img-fluid">
-          </div>
-          <div class="col-md-9 text-left">
-            <h1><?php echo $site['namaweb'] ?></h1>
-            <p style="font-size: 12px; font-weight: bold;"><?php echo $site['tagline'] ?></p>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <p class="login-box-msg">Masukkan username dan password</p>
-
-       <?php echo '<span class="text-danger">'.\Config\Services::validation()->listErrors().'</span>'; ?>
-<?php 
-
- echo form_open(base_url('login')); ?>
-      <?= csrf_field() ?>
-
-        <div class="input-group mb-3">
-          <input type="text" name="username" class="form-control" placeholder="Username">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-user"></span>
-            </div>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input type="password" name="password" class="form-control" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      <?php echo form_close(); ?>
-      <hr>
-      <p class="mb-1 text-center">
-        <a href="<?php echo base_url('login/lupa') ?>">Lupa Password?</a> | <a href="<?php echo base_url() ?>" class="text-center">Home</a>
-      </p>
-    </div>
-    <!-- /.login-card-body -->
-  </div>
-</div>
 <!-- /.login-box -->
 
 <script>
@@ -139,7 +76,7 @@ swal ( "Mohon maaf" ,  "<?php echo $session->getFlashdata('warning'); ?>" ,  "wa
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->  
-  <link rel="icon" type="image/png" href="<?php echo base_url() ?>/assets/login/images/icons/favicon.ico"/>
+  <link rel="icon" type="image/png" href="<?php echo base_url() ?>/assets/upload/image/SCTC/Logo.png"/>
 <!--===============================================================================================-->
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -156,18 +93,22 @@ swal ( "Mohon maaf" ,  "<?php echo $session->getFlashdata('warning'); ?>" ,  "wa
 <!--===============================================================================================-->
 </head>
 <body>
-  
+   <?php echo '<span class="text-danger">'.\Config\Services::validation()->listErrors().'</span>'; ?>
+<?php 
+
+ echo form_open(base_url('login')); ?>
+      <?= csrf_field() ?>
   <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100">
-        <div class="login100-pic js-tilt" data-tilt>
-          <img src="<?php echo base_url() ?>/assets/login/images/img-01.png" alt="IMG">
+        <div class="login100-pic js-tilt" data-tilt style="margin-left: 210px;">
+          <img src="<?php echo base_url() ?>/assets/upload/image/SCTC/Logo.png" alt="IMG">
         </div>
 
         <form class="login100-form validate-form">
           <span class="login100-form-title">
-            Member Login
-          </span>
+         
+          </span> <h2 style="margin-left: 230px; margin-bottom:50px;"> <b>SCTC LIVING LAB </b></h2>
 
           <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
             <input class="input100" type="text" name="username" placeholder="Email">
@@ -187,7 +128,7 @@ swal ( "Mohon maaf" ,  "<?php echo $session->getFlashdata('warning'); ?>" ,  "wa
           
           <div class="container-login100-form-btn">
             <button class="login100-form-btn" type="submit">
-              Login
+              Masuk
             </button>
           </div>
 
@@ -211,7 +152,7 @@ swal ( "Mohon maaf" ,  "<?php echo $session->getFlashdata('warning'); ?>" ,  "wa
     </div>
   </div>
   
-  
+        <?php echo form_close(); ?>
 
   
 <!--===============================================================================================-->  

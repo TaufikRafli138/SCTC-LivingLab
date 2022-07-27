@@ -22,7 +22,7 @@ $site         = $konfigurasi->listing();
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?php echo base_url() ?>/assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?php echo base_url('assets/upload/image/'.$session->get('gambar')) ?>" class="img-circle elevation-2" alt="User Image" style="width:30px; height: 30px;">
         </div>
         <div class="info">
           <a href="<?php echo base_url('admin/akun') ?>" class="d-block"><?php echo $session->get('nama') ?></a>
@@ -43,7 +43,7 @@ $site         = $konfigurasi->listing();
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-newspaper"></i>
-              <p>Berita, Profil &amp; Layanan
+              <p>Content
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -68,7 +68,38 @@ $site         = $konfigurasi->listing();
               </li>
             </ul>
           </li>
+
+
+         <!--  <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>Service
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url('admin/berita') ?>" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Data Berita/Profil</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url('admin/berita/tambah') ?>" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Tambah Berita/Profil</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url('admin/kategori') ?>" class="nav-link">
+                  <i class="fas fa-tags nav-icon"></i>
+                  <p>Kategori Berita/Profil</p>
+                </a>
+              </li>
+            </ul>
+          </li> -->
           <!-- Galeri -->
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-image"></i>
@@ -97,8 +128,10 @@ $site         = $konfigurasi->listing();
               </li>
             </ul>
           </li>
+
           <!-- Download -->
-          <li class="nav-item">
+
+<!--           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-download"></i>
               <p>Data File Download
@@ -125,9 +158,11 @@ $site         = $konfigurasi->listing();
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
+
           <!-- Video -->
-          <li class="nav-item">
+
+<!--           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fab fa-youtube"></i>
               <p>Data Video Youtube
@@ -148,8 +183,10 @@ $site         = $konfigurasi->listing();
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
+
           <!-- pengguna -->
+
           <li class="nav-item">
             <a href="<?php echo base_url('admin/client') ?>" class="nav-link">
               <i class="nav-icon fas fa-tasks"></i>
@@ -160,7 +197,7 @@ $site         = $konfigurasi->listing();
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-image"></i>
-              <p>Staff &amp; Team
+              <p>Owner Product
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>

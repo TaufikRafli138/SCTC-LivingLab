@@ -17,7 +17,7 @@ class Berita extends BaseController
 		$berita 		= $m_berita->listing();
 		$total 			= $m_berita->total();
 
-		$data = [	'title'			=> 'Berita, Profil dan Layanan ('.$total.')',
+		$data = [	'title'			=> 'Content Management ('.$total.')',
 					'berita'		=> $berita,
 					'content'		=> 'admin/berita/index'
 				];

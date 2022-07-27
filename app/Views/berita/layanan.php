@@ -18,7 +18,7 @@
       <div class="row mt-2">
 
          <div class="col-md-4">
-           <img src="<?php echo base_url('assets/upload/image/'.$berita['gambar']) ?>" class="img img-thumbnail">
+           <img src="<?php echo base_url('assets/upload/image/'.$gambar) ?>" class="img img-thumbnail">
          </div>
          <div class="col-md-8">
           <div class="card">
@@ -26,7 +26,7 @@
               <h1><?php echo $title ?></h1>
             </div>
             <div class="card-body">
-               <?php echo $berita['isi'] ?>
+               <?php echo $isi ?>
             </div>
             <div class="card-footer">
               Updated by: <?php echo $berita['nama'] ?> | Tanggal: <?php echo tanggal_bulan_menit($berita['tanggal']) ?>

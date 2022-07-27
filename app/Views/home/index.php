@@ -8,21 +8,6 @@ $profil       = $menu->profil();
 $layanan      = $menu->layanan();
 ?>
 
-<!-- ======= Hero Section ======= -->
-<<<<<<< HEAD
- 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
-      <h1>SCTC Living Lab</h1>
-
-      <h2>Smart city ​Smart government</h2>
-
-      <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-      </div>
-=======
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
@@ -32,7 +17,6 @@ $layanan      = $menu->layanan();
     <div class="d-flex">
       <a href="#about" class="btn-get-started scrollto">Get Started</a>
       <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
->>>>>>> 02e88316092f6c9774bc6dd77555304d6f407c5d
     </div>
   </div>
 </section><!-- End Hero -->

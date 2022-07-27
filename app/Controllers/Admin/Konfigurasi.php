@@ -27,6 +27,8 @@ class Konfigurasi extends BaseController
 						'tagline'			=> $this->request->getPost('tagline'),
 						'tentang'			=> $this->request->getPost('tentang'),
 						'deskripsi'			=> $this->request->getPost('deskripsi'),
+						'visi'				=> $this->request->getPost('visi'),
+						'misi'				=> $this->request->getPost('misi'),
 						'website'			=> $this->request->getPost('website'),
 						'email'				=> $this->request->getPost('email'),
 						'email_cadangan'	=> $this->request->getPost('email_cadangan'),

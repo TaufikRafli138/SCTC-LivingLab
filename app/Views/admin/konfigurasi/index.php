@@ -36,6 +36,18 @@ echo csrf_field();
 <h4>Informasi Profil Website/Aplikasi</h4>
 <hr>
 <div class="form-group row">
+	<label class="col-3">Visi</label>
+	<div class="col-9">
+		<textarea name="visi" class="form-control konten" rows="5"><?php echo $konfigurasi['Visi'] ?></textarea>
+	</div>
+</div>
+<div class="form-group row">
+	<label class="col-3">Misi</label>
+	<div class="col-9">
+		<textarea name="misi" class="form-control konten" rows="5"><?php echo $konfigurasi['Misi'] ?></textarea>
+	</div>
+</div>
+<div class="form-group row">
 	<label class="col-3">Tentang Website</label>
 	<div class="col-9">
 		<textarea name="tentang" class="form-control konten" rows="5"><?php echo $konfigurasi['tentang'] ?></textarea>
