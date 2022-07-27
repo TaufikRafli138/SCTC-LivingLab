@@ -4,7 +4,8 @@ $session = \Config\Services::session();
 $konfigurasi  = new Konfigurasi_model;
 $site         = $konfigurasi->listing();
 ?>
-
+  <link href="<?php echo base_url('assets/upload/image/' . $site['icon']) ?>" rel="icon">
+  <link href="<?php echo base_url('assets/upload/image/' . $site['icon']) ?>" rel="apple-touch-icon">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -26,6 +27,20 @@ $site         = $konfigurasi->listing();
   <!-- summernote -->
   <link rel="stylesheet" href="<?php echo base_url() ?>/assets/adminlte/plugins/summernote/summernote-bs4.min.css">
 
+<style type="text/css">
+  
+.dataTables_wrapper .dataTables_filter {
+    float:right;
+    text-align: left;
+    margin-top: 100px;
+    
+}
+
+
+
+</style>
+
+
 <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -33,12 +48,12 @@ $site         = $konfigurasi->listing();
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+     <!--  <li class="nav-item d-none d-sm-inline-block">
         <a href="<?php echo base_url('admin/dasbor') ?>" class="nav-link">Dashboard</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<?php echo base_url() ?>" class="nav-link" target="_blank">Homepage</a>
-      </li>
+      </li> -->
       
     </ul>
 
