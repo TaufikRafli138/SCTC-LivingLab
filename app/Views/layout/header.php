@@ -26,13 +26,13 @@ $menu_layanan  = $menu->layanan();
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 
-  <title>SCTC - Living Lab</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<title>SCTC - Living Lab</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="<?php echo base_url() ?>/assets/upload/image/SCTC/Logo.png" rel="icon">
-  <link href="<?php echo base_url() ?>/assets/dasbor/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Favicons -->
+<link href="<?php echo base_url() ?>/assets/upload/image/SCTC/Logo.png" rel="icon">
+<link href="<?php echo base_url() ?>/assets/dasbor/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 <title>Dewi Bootstrap Template - Index</title>
 <meta content="" name="description">
@@ -64,7 +64,7 @@ $menu_layanan  = $menu->layanan();
   ======================================================== -->
 
 
-  <!-- ======= Header ======= -->
+<!-- ======= Header ======= -->
 
 
 
@@ -74,7 +74,7 @@ $menu_layanan  = $menu->layanan();
   <div class="container d-flex align-items-center justify-content-between">
 
 
-    <h1 class="logo"><img src="<?php echo base_url() ?>/assets/upload/image/SCTC/Logo.png"><a href="index.html" style="margin-left:10px;">SCTC</a></h1>
+    <h1 class="logo"><img src="<?php echo base_url() ?>/assets/upload/image/SCTC/Logo.png"><a href="<?php echo base_url() ?>" style="margin-left:10px;">SCTC</a></h1>
 
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -84,7 +84,7 @@ $menu_layanan  = $menu->layanan();
         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
         <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#">Company Profile</a></li>
+            <li><a href="<?php echo base_url() ?>/companyprofile">Company Profile</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Client & Association</a></li>
           </ul>
