@@ -1546,15 +1546,15 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #121d24;
+  background:#9F1521;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #15222b;
-  border-bottom: 1px solid #1d303c;
+  background:#9F1521;
+  border-bottom: 1px solid #9F1521;
   padding: 60px 0 30px 0;
 }
 
@@ -1679,7 +1679,7 @@ section {
 }
 
 #footer .copyright {
-  text-align: center;
+  text-align: left;
   padding-top: 30px;
 }
 
