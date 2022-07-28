@@ -51,6 +51,15 @@ class Berita extends BaseController
 			    ->withFile(WRITEPATH . '../assets/upload/image/'.$namabaru)
 			    ->fit(100, 100, 'center')
 			    ->save(WRITEPATH . '../assets/upload/image/thumbs/'.$namabaru);
+
+			    $avatar1  	= $this->request->getFile('gambar2');
+				$namabaru1 	= str_replace(' ','-',$avatar1->getName());
+	            $avatar1->move(WRITEPATH . '../assets/upload/image/',$namabaru1);
+	            // Create thumb
+	            $image1 = \Config\Services::image()
+			    ->withFile(WRITEPATH . '../assets/upload/image/'.$namabaru1)
+			    ->fit(100, 100, 'center')
+			    ->save(WRITEPATH . '../assets/upload/image/thumbs/'.$namabaru1);
 	        	// masuk database
 	        	$data = array(
 	        		'id_user'		=> $this->session->get('id_user'),
@@ -58,6 +67,13 @@ class Berita extends BaseController
 					'slug_berita'	=> strtolower(url_title($this->request->getVar('judul_berita'))),
 					'judul_berita'	=> $this->request->getVar('judul_berita'),
 					'ringkasan'		=> $this->request->getVar('ringkasan'),
+					'gambar2'		=> $namabaru1,
+					'section2'		=> $this->request->getVar('section2'),
+					'detail2'		=> $this->request->getVar('konten2'),
+					'section3'		=> $this->request->getVar('section3'),
+					'detail3'		=> $this->request->getVar('konten3'),
+					'section4'		=> $this->request->getVar('section4'),
+					'detail4'		=> $this->request->getVar('konten4'),
 					'isi'			=> $this->request->getVar('isi'),
 					'status_berita'	=> $this->request->getVar('status_berita'),
 					'jenis_berita'	=> $this->request->getVar('jenis_berita'),
@@ -75,6 +91,12 @@ class Berita extends BaseController
 					'slug_berita'	=> strtolower(url_title($this->request->getVar('judul_berita'))),
 					'judul_berita'	=> $this->request->getVar('judul_berita'),
 					'ringkasan'		=> $this->request->getVar('ringkasan'),
+					'section2'		=> $this->request->getVar('section2'),
+					'detail2'		=> $this->request->getVar('konten2'),
+					'section3'		=> $this->request->getVar('section3'),
+					'detail3'		=> $this->request->getVar('konten3'),
+					'section4'		=> $this->request->getVar('section4'),
+					'detail4'		=> $this->request->getVar('konten4'),
 					'isi'			=> $this->request->getVar('isi'),
 					'status_berita'	=> $this->request->getVar('status_berita'),
 					'jenis_berita'	=> $this->request->getVar('jenis_berita'),
@@ -88,7 +110,7 @@ class Berita extends BaseController
 	    }
 
 
-		$data = [	'title'			=> 'Tambah Berita',
+		$data = [	'title'			=> 'Tambah Konten',
 					'kategori'		=> $kategori,
 					'content'		=> 'admin/berita/tambah'
 				];

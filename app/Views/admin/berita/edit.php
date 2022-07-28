@@ -2,27 +2,21 @@
 <?php 
 echo csrf_field(); 
 ?>
+<?php echo $berita['judul_berita'] ?>
+
 
 <div class="form-group row">
-	<label class="col-md-2">Judul Berita</label>
+	<label class="col-md-2">Judul Konten</label>
 	<div class="col-md-10">
 		<input type="text" name="judul_berita" class="form-control" value="<?php echo $berita['judul_berita'] ?>" required>
 	</div>
 </div>
-
-<div class="form-group row">
-	<label class="col-md-2">Upload Gambar Berita</label>
-	<div class="col-md-10">
-		<input type="file" name="gambar" class="form-control" value="<?php echo $berita['gambar'] ?>">
-	</div>
-</div>
-
 <div class="form-group row">
 	<label class="col-md-2">Kategori, Jenis &amp; Status</label>
 	<div class="col-md-2">
 		<select name="id_kategori" class="form-control">
 			<?php foreach($kategori as $kategori) { ?>
-			<option value="<?php echo $kategori['id_kategori'] ?>" <?php if($berita['id_kategori']==$kategori['id_kategori']) { echo 'selected'; } ?>>
+			<option value="<?php echo $kategori['id_kategori'] ?>">
 				<?php echo $kategori['nama_kategori'] ?>
 			</option>
 			<?php } ?>
@@ -32,23 +26,28 @@ echo csrf_field();
 	<div class="col-md-2">
 		<select name="jenis_berita" class="form-control">
 			<option value="Berita">Berita</option>
-			<option value="Layanan" <?php if($berita['jenis_berita']=="Layanan") { echo 'selected'; } ?>>Layanan</option>
-			<option value="Profil" <?php if($berita['jenis_berita']=="Profil") { echo 'selected'; } ?>>Profil</option>
+			<option value="Layanan">Layanan</option>
+			<option value="Profil">Portfolio</option>
+			<option value="Profil">Services</option>
 		</select>
 		<small class="text-secondary">Jenis konten</small>
 	</div>
 	<div class="col-md-2">
 		<select name="status_berita" class="form-control">
 			<option value="Publish">Publish</option>
-			<option value="Draft" <?php if($berita['status_berita']=="Draft") { echo 'selected'; } ?>>Draft</option>
+			<option value="Draft">Draft</option>
 		</select>
 		<small class="text-secondary">Status publikasi</small>
 	</div>
 	<div class="col-md-2">
-		<input type="text" name="icon" class="form-control" value="<?php echo $berita['icon'] ?>">
+		<input type="text" name="icon" class="form-control" value="<?php echo set_value('icon') ?>">
 		<small class="text-secondary">Icon <a href="https://fontawesome.com/icons" target="_blank">Fontawsome</a></small>
 	</div>
 </div>
+
+
+
+
 
 <div class="form-group row">
 	<label class="col-md-2">Ringkasan</label>
@@ -58,11 +57,70 @@ echo csrf_field();
 </div>
 
 <div class="form-group row">
+	<label class="col-md-2">Upload Gambar konten 1</label>
+	<div class="col-md-10">
+		<input type="file" name="gambar" class="form-control" value="<?php echo $berita['gambar'] ?>">
+	</div>
+</div>
+
+
+<div class="form-group row">
 	<label class="col-md-2">Isi Berita</label>
 	<div class="col-md-10">
 		<textarea name="isi" class="form-control konten"><?php echo $berita['isi'] ?></textarea>
 	</div>
 </div>
+
+<div class="form-group row">
+	<label class="col-md-2">Upload Gambar Konten 2</label>
+	<div class="col-md-10">
+		<input type="file" name="gambar2" class="form-control" value="<?php echo $berita['gambar2'] ?>">
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Judul Section 2</label>
+	<div class="col-md-10">
+		<input type="text" name="section2" class="form-control" value="<?php echo $berita['section2'] ?>" required>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Konten Section 2</label>
+	<div class="col-md-10">
+		<textarea name="konten2" class="form-control konten"><?php echo $berita['detail2'] ?></textarea>
+	</div>
+</div>
+<hr>
+<div class="form-group row">
+	<label class="col-md-2">Judul Section 3</label>
+	<div class="col-md-10">
+		<input type="text" name="section3" class="form-control" value="<?php echo $berita['section3'] ?>" required>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Konten Section 3</label>
+	<div class="col-md-10">
+		<textarea name="konten3" class="form-control konten"><?php echo $berita['detail3'] ?></textarea>
+	</div>
+</div>
+<hr>
+<div class="form-group row">
+	<label class="col-md-2">Judul Section 4</label>
+	<div class="col-md-10">
+		<input type="text" name="section4" class="form-control" value="<?php echo $berita['section4'] ?>" required>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Konten Section 4</label>
+	<div class="col-md-10">
+		<textarea name="konten4" class="form-control konten"><?php echo $berita['detail4'] ?></textarea>
+	</div>
+</div>
+
+
 
 <div class="form-group row">
 	<label class="col-md-2">Keyword Berita (untuk SEO Google)</label>

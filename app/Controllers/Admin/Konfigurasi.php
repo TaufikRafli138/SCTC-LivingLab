@@ -133,6 +133,51 @@ class Konfigurasi extends BaseController
         }		
 	}
 
+
+		// logo
+	public function Struktur()
+	{
+		checklogin();
+		$m_konfigurasi 	= new Konfigurasi_model();
+		$konfigurasi 	= $m_konfigurasi->listing();
+		$id_konfigurasi = $konfigurasi['id_konfigurasi'];
+		// Start validasi
+		if($this->request->getMethod() === 'post' && $this->validate([
+			'id_konfigurasi' => 'required',
+			'logo'	 		=> [
+                'uploaded[logo]',
+                'mime_in[logo,image/jpg,image/jpeg,image/gif,image/png]',
+                'max_size[logo,4096]',
+            ],
+		])) {
+			// Image upload
+			$avatar  	= $this->request->getFile('logo');
+			$namabaru 	= $avatar->getName();
+            $avatar->move(WRITEPATH . '../assets/upload/image/',$namabaru);
+            // Create thumb
+            $image = \Config\Services::image()
+		    ->withFile(WRITEPATH . '../assets/upload/image/'.$namabaru)
+		    ->fit(100, 100, 'center')
+		    ->save(WRITEPATH . '../assets/upload/image/thumbs/'.$namabaru);
+        	// masuk database
+			$data = [	'id_konfigurasi'	=> $konfigurasi['id_konfigurasi'],
+						'id_user'			=> $this->session->get('id_user'),
+						'Struktur'			=> $namabaru
+					];
+			$m_konfigurasi->edit($data);
+			// masuk database
+			$this->session->setFlashdata('sukses','Data telah diupdate');
+			return redirect()->to(base_url('admin/konfigurasi/Struktur'));
+        }else{
+        	// End validasi
+			$data = [	'title'			=> 'Update Struktur Organisasi',
+						'konfigurasi'	=> $konfigurasi,
+						'content'		=> 'admin/konfigurasi/StrukturOrganisasi'
+					];
+			echo view('admin/layout/wrapper',$data);
+        }		
+	}
+
 	// icon
 	public function icon()
 	{

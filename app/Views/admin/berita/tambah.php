@@ -4,19 +4,11 @@ echo csrf_field();
 ?>
 
 <div class="form-group row">
-	<label class="col-md-2">Judul Berita</label>
+	<label class="col-md-2">Judul Konten</label>
 	<div class="col-md-10">
 		<input type="text" name="judul_berita" class="form-control" value="<?php echo set_value('judul_berita') ?>" required>
 	</div>
 </div>
-
-<div class="form-group row">
-	<label class="col-md-2">Upload Gambar Berita</label>
-	<div class="col-md-10">
-		<input type="file" name="gambar" class="form-control" value="<?php echo set_value('gambar') ?>">
-	</div>
-</div>
-
 <div class="form-group row">
 	<label class="col-md-2">Kategori, Jenis &amp; Status</label>
 	<div class="col-md-2">
@@ -33,7 +25,8 @@ echo csrf_field();
 		<select name="jenis_berita" class="form-control">
 			<option value="Berita">Berita</option>
 			<option value="Layanan">Layanan</option>
-			<option value="Profil">Profil</option>
+			<option value="Profil">Portfolio</option>
+			<option value="Profil">Services</option>
 		</select>
 		<small class="text-secondary">Jenis konten</small>
 	</div>
@@ -50,6 +43,10 @@ echo csrf_field();
 	</div>
 </div>
 
+
+
+
+
 <div class="form-group row">
 	<label class="col-md-2">Ringkasan</label>
 	<div class="col-md-10">
@@ -58,11 +55,70 @@ echo csrf_field();
 </div>
 
 <div class="form-group row">
+	<label class="col-md-2">Upload Gambar konten 1</label>
+	<div class="col-md-10">
+		<input type="file" name="gambar" class="form-control" value="<?php echo set_value('gambar') ?>">
+	</div>
+</div>
+
+
+<div class="form-group row">
 	<label class="col-md-2">Isi Berita</label>
 	<div class="col-md-10">
 		<textarea name="isi" class="form-control konten"><?php echo set_value('isi') ?></textarea>
 	</div>
 </div>
+
+<div class="form-group row">
+	<label class="col-md-2">Upload Gambar Konten 2</label>
+	<div class="col-md-10">
+		<input type="file" name="gambar2" class="form-control" value="<?php echo set_value('gambar2') ?>">
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Judul Section 2</label>
+	<div class="col-md-10">
+		<input type="text" name="section2" class="form-control" value="<?php echo set_value('judul_berita') ?>" required>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Konten Section 2</label>
+	<div class="col-md-10">
+		<textarea name="konten2" class="form-control konten"><?php echo set_value('isi') ?></textarea>
+	</div>
+</div>
+<hr>
+<div class="form-group row">
+	<label class="col-md-2">Judul Section 3</label>
+	<div class="col-md-10">
+		<input type="text" name="section3" class="form-control" value="<?php echo set_value('judul_berita') ?>" required>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Konten Section 3</label>
+	<div class="col-md-10">
+		<textarea name="konten3" class="form-control konten"><?php echo set_value('isi') ?></textarea>
+	</div>
+</div>
+<hr>
+<div class="form-group row">
+	<label class="col-md-2">Judul Section 4</label>
+	<div class="col-md-10">
+		<input type="text" name="section4" class="form-control" value="<?php echo set_value('judul_berita') ?>" required>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Konten Section 4</label>
+	<div class="col-md-10">
+		<textarea name="konten4" class="form-control konten"><?php echo set_value('isi') ?></textarea>
+	</div>
+</div>
+
+
 
 <div class="form-group row">
 	<label class="col-md-2">Keyword Berita (untuk SEO Google)</label>
